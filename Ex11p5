@@ -1,0 +1,57 @@
+package TurtleGraphics;
+
+import java.util.Scanner;
+
+public class Ex11p5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int starting, totaldays;
+//read in first weekday calendar starts on
+starting=getInputInt("Enter first day of month; 0=Sunday and 6=Saturday");
+//read in how many days month is
+totaldays=getInputInt("Enter the total amount of days in the caendar:");
+
+	}
+	public static int getInputInt(String Request)
+// import Scanner into secondary class.
+	{
+
+	   int a;
+
+	//   float b;
+
+	//   String s;
+
+
+
+	   Scanner in = new Scanner(System.in);
+
+
+
+	//   System.out.println("Enter a string");
+
+	//   s = in.nextLine();
+
+	//   System.out.println("You entered string "+s);
+
+
+
+	   System.out.println(Request);
+
+	   a = in.nextInt();
+
+	   //System.out.println("You entered integer "+a+" "+ Request);
+
+		  return a;
+
+
+
+	//   System.out.println("Enter a float");
+
+	//   b = in.nextFloat();
+
+	//   System.out.println("You entered float "+b);   
+
+	}
+}
