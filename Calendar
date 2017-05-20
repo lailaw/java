@@ -5,18 +5,19 @@ public class Calendar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int startday, numberofdays, beginning, numberofrows;
+		int startday, numberofdays, beginning, numberofrows, activeday;
 		startday=getInputInt("Enter starting day; 0=Sunday..");
 		numberofdays=getInputInt("Enter amount of days in month");
 		beginning=findStartCount(startday);
+		activeday=beginning;
 		numberofrows=findRows(numberdayscount);
 		for (int j=1; j<=numberofrows; j++){
-		PrintSolidRow
+		PrintSolidRow();
 		for(int week=1; week<=7; week++){
-		PrintOneDay(activeday, numberofdays)
+		PrintOneDay(activeday, numberofdays):
 		activeday++;
 		}
-		PrintSpacedRow
+		PrintSpacedRow();
 		}
 	}
 	public static int findStartCount(int count){
