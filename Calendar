@@ -10,9 +10,9 @@ public class Calendar {
 		numberofdays=getInputInt("Enter amount of days in month");
 		beginning=findStartCount(startday);
 		numberofrows=findRows(numberdayscount);
-		for (int j; stop at numberofrows; count++){
+		for (int j=1; j<=numberofrows; j++){
 		PrintSolidRow
-		for(int week; stop at 8 repetitions; count++){
+		for(int week; stop at 8 repetitions; week++){
 		PrintOneDay(activeday, numberofdays)
 		activeday++;
 		}
