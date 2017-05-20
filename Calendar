@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Calendar {
@@ -23,6 +24,28 @@ public class Calendar {
 			numberofrows++;
 		}
 		return numberofrows;
+	}
+	public void PrintDays(){
+		System.out.println("   Sun     Mon     Tue     Wed     Thu     Fri     Sat");
+	}
+	public void PrintSolidRow() {
+		System.out.println("******************************************************");
+	}
+	public static PrintNumberedRow(int daycount, int numberofdays){
+		if((daycount<=0)&&(daycount>numberofdays){
+			System.out.println("       *");
+		}
+		if((daycount>=1)&&(daycount<10)){
+			System.out.println("      "+daycount+"*");
+		}
+		if((daycount>=10)&&(daycount<=numberofdays)){
+			Sytem.out.println("     "+daycount+"");
+		}
+	}
+	//
+	public void PrintSpacedRow(){
+		System.out.println("*       *       *       *       *       *       *       *");
+		System.out.println("*       *       *       *       *       *       *       *");
 	}
 	public static int getInputInt(String Request)
 
