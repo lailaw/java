@@ -31,7 +31,7 @@ public class Calendar {
 	public void PrintSolidRow() {
 		System.out.println("******************************************************");
 	}
-	public static PrintNumberedRow(int daycount, int numberofdays){
+	public static PrintOneDay(int daycount, int numberofdays){
 		if((daycount<=0)&&(daycount>numberofdays){
 			System.out.println("       *");
 		}
