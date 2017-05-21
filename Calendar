@@ -10,6 +10,7 @@ public class Calendar {
 		beginning=findStartCount(startday);
 		activeday=beginning;
 		numberofrows=findRows(numberofdays, beginning);
+		PrintDays();
 		for (int j=1; j<=numberofrows; j++){
 			PrintSolidRow();
 			System.out.print("*");
@@ -20,6 +21,7 @@ public class Calendar {
 			System.out.println("");
 			PrintSpacedRow();
 			}
+		PrintSolidRow();
 	}
 	public static int findStartCount(int count){
 		
@@ -39,7 +41,7 @@ public class Calendar {
 		System.out.println("   Sun     Mon     Tue     Wed     Thu     Fri     Sat");
 	}
 	public static void PrintSolidRow() {
-		System.out.println("******************************************************");
+		System.out.println("*********************************************************");
 	}
 	public static void PrintOneDay(int daycount, int numberofdays){
 		if((daycount<=0)||(daycount>numberofdays)){
