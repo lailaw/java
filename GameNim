@@ -10,11 +10,30 @@ public class GameNim {
 		Random generator=new Random();
 		int numberofstones;
 		numberofstones=generator.nextInt(16)+15;
-		System.out.println("The numberof stones is "+numberofstones+"");
-			int numberofstoneschange;
-	//= getInputInt("How many stones do you want to take?");
-			//numberofstoneschange=numberofstones-userstonestaken;
-		
+		System.out.println("There are "+numberofstones+" stones.");
+			int numberofstoneschange, userstonestaken;
+			for(int j = 0; j<=1; j++){
+				userstonestaken= getInputInt("How many stones do you want to take?");
+			if (userstonestaken>3){
+				System.out.println("You can only take 3 stones.");
+			}
+			if(userstonestaken<=3){
+			numberofstoneschange=numberofstones-userstonestaken;
+			System.out.print(numberofstoneschange);}}
+	}
+	public void ComputerTurn(int numberofstoneschange){
+	int computerstonestaken;
+	Random generator=new Random();
+	computerstonestaken=generator.nextInt(3)+1;
+	System.out.println("There are "+numberofstoneschange+" stones. The computer takes "+computerstonestaken+" stones.");
+	numberofstoneschange=numberofstoneschange-computerstonestaken;
+	}
+	public void UserTurn(int numberofstoneschange){
+		int userstonestaken;
+		userstonestaken= getInputInt("How many stones do you want to take?");
+	if((userstonestaken>3)||(userstonestaken>numberofstoneschange)){
+		System.out.println("You can only take 3 stones.");
+	}
 	}
 	public static int getInputInt(String Request)
 
