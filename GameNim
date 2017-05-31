@@ -20,6 +20,12 @@ public class GameNim {
 			if(userstonestaken<=3){
 			numberofstoneschange=numberofstones-userstonestaken;
 			System.out.print(numberofstoneschange);}}
+	for(int k; numberofstones<=0;k++){ 
+		//call ComputerTurn
+		//call UserTurn
+	}
+	//loop determining winner
+	//if		
 	}
 	public void ComputerTurn(int numberofstoneschange){
 	int computerstonestaken;
@@ -27,13 +33,18 @@ public class GameNim {
 	computerstonestaken=generator.nextInt(3)+1;
 	System.out.println("There are "+numberofstoneschange+" stones. The computer takes "+computerstonestaken+" stones.");
 	numberofstoneschange=numberofstoneschange-computerstonestaken;
+	UserTurn(numberofstoneschange);
 	}
 	public void UserTurn(int numberofstoneschange){
 		int userstonestaken;
 		userstonestaken= getInputInt("How many stones do you want to take?");
-	if((userstonestaken>3)||(userstonestaken>numberofstoneschange)){
+	if((userstonestaken>3)&&(userstonestaken<numberofstoneschange)){
 		System.out.println("You can only take 3 stones.");
 	}
+	if((userstonestaken>3)&&(userstonestaken>numberofstoneschange)){
+		System.out.println("You can only take 1 to "+numberofstoneschange+".");
+	}
+	ComputerTurn(numberofstoneschange);
 	}
 	public static int getInputInt(String Request)
 
@@ -78,3 +89,4 @@ public class GameNim {
 	}
 
 }
+
