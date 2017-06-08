@@ -1,0 +1,74 @@
+package TurtleGraphics;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class DiceGame15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random generator=new Random();
+		int risk, randval1, randval2, changescore, valsum, debatedsum;
+System.out.println("You have 1000 points");
+		//ask user risk amount
+		risk= getInputInt("Points to risk:");
+		//random generator creating two random int values
+		randval1=generator.nextInt(10)+1;
+		randval2=generator.nextInt(10)+1;
+		//int1+int2=answer, so if answer%2=0, 
+		System.out.println("Roll is "+randval1+" and "+randval2+"");
+		valsum=randval1+randval2;
+		debatedsum=valsum%2;
+		if (debatedsum==0){
+			changescore=1000-risk;
+			System.out.println("You lose.");
+		}
+		if(debatedsum!=0){}
+			//if person wants to play again, reprint game w/ changescore variable.
+			//
+	}
+
+
+public static int getInputInt(String Request)
+
+{
+
+	int a;
+
+	//   float b;
+
+	//   String s;
+
+
+
+	Scanner in = new Scanner(System.in);
+
+
+
+	//   System.out.println("Enter a string");
+
+	//   s = in.nextLine();
+
+	//   System.out.println("You entered string "+s);
+
+
+
+	System.out.println(Request);
+
+	a = in.nextInt();
+
+	//System.out.println("You entered integer "+a+" "+ Request);
+
+	return a;
+
+
+
+	//   System.out.println("Enter a float");
+
+	//   b = in.nextFloat();
+
+	//   System.out.println("You entered float "+b);   
+
+}
+
+}
